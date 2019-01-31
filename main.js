@@ -1,70 +1,63 @@
-//1
-var myString = 'Моя строка';
-console.log(myString);
-if (false)  
-console.log(myString);
+//2. Инициализация переменных
+var myString = 'Viktoria',
+myNumber = 21,
+myBool = true,
+array = [1,2,3,4],
+obj = {name: "Viktoria"}
 
-//2
-var browser = {
-  name: 'Chrome',
-  version: '6'}
-console.log(browser.name, browser.version);
+console.log(myString, myNumber, myBool, array, obj)
 
-//3
-var browser = 
-{name: 'Chrome',
-version: '6'
-};
-browser.downloaded = function (n) {
-  console.log ('Скачан ' +n+ ' дней назад')
-}
-browser.downloaded(5)
+//3. Преобразование целого в вещественный тип, с 2 знаками после запятой
+var n = new Number (21);
+console.log (n.toFixed(2))
 
-//4. Вывод четных значений от 1 до 20
-var i;
-for (i = 1; i <= 20; i++) {
-  if (i % 2 == 0) {
-    console.log(i);
-  }
-}
+//4. Префиксный и постфиксный инкремент
+var i = 10;
+console.log (++i)
 
-//5 
-var x = 3;
-switch (x) {
-  case 1: console.log ('x равен 1'); break;
-  case 2: console.log ('x равен 2'); break;
-  case 3: console.log ('x равен 3'); break;
-  
-  default: 
-  console.log(x > 3);
-}
+var i = 10;
+console.log (i++)
 
-//6. Тернарный оператор
-var x = Math.PI > 4 ? 'Да' : 'Нет'; 
-console.log(x);
-//6.1
-var x = 9;
-var result = (x % 2 == 0) ? 'четное' : 'нечетное';
-console.log(result);
-//6.2
-var n = 10;
-var result = (n < 20) ? 'menshe' : (n > 20) ? 'bolshe' : 'raven';
-console.log(result);
+//5. Присваивание
+var n = 21;
+n += 20;
+console.log (n)
 
-//7
-var i = 0;
-while (i < 7) {
-  console.log(++i);
-}
+var n = 21;
+n -= 20;
+console.log (n)
 
-//8. Callback
-function myMath (arg1, arg2, callback) {
-  alert ('Число 2 в степени 4');
-  var myResult = (Math.pow (arg1,arg2));
-  callback(myResult);
-}
-myMath (2, 4, function(res) {
-  alert ('Результат ' + res);
-});
+var n = 21;
+n *= 2;
+console.log (n)
 
+var n = 21;
+n /= 2;
+console.log (n)
 
+var n = 21;
+n %= 11;
+console.log (n)
+
+// 6. Math
+console.log (Math.PI);
+console.log (Math.round(89.279));
+console.log (Math.random()*10);
+console.log (Math.pow(2,5))
+
+// 7. Длина строки
+console.log ('My name is Viktoria'.length);
+
+// 8. Проверка на наличие подстроки в строке
+var string = 'My name is Viktoria';
+console.log (string.indexOf('is'));
+console.log (string.indexOf('are'))
+
+// 9. Переименование подстроки
+var string = 'My name is Viktoria';
+console.log (string.replace('Viktoria','Vikky'))
+
+// 10. Преобразование строки в верхний и нижний регистры
+var string = 'My name is Viktoria';
+console.log (string.toUpperCase())
+console.log (string.toLowerCase())
